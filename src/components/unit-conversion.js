@@ -20,7 +20,9 @@ function UnitConversion ({ activeUnitType, setActiveUnitType }) {
     function firstValueChange (event) {
         setFirstUnitValue(event.target.value)
         console.log(`The first value has been changed to ${event.target.value}`)
-        if(data.unitTypes[activeUnitType][firstUnitType][secondUnitType][0] === 'x') {
+        if(firstUnitType === secondUnitType) {
+            console.log('same type')
+        } else if(data.unitTypes[activeUnitType][firstUnitType][secondUnitType][0] === 'x') {
             setAnswer(firstUnitValue * data.unitTypes[activeUnitType][firstUnitType][secondUnitType][1])
         } else if (data.unitTypes[activeUnitType][firstUnitType][secondUnitType][0] === '/') {
             setAnswer(firstUnitValue / data.unitTypes[activeUnitType][firstUnitType][secondUnitType][1])
@@ -44,6 +46,8 @@ function UnitConversion ({ activeUnitType, setActiveUnitType }) {
     useEffect(() => {
         if(firstUnitValue === '') {
             console.log('no answer')
+        } else if(firstUnitType === secondUnitType) {
+            console.log('same unit type')
         } else {
             if(data.unitTypes[activeUnitType][firstUnitType][secondUnitType][0] === 'x') {
                 setAnswer(firstUnitValue * data.unitTypes[activeUnitType][firstUnitType][secondUnitType][1])
@@ -53,7 +57,12 @@ function UnitConversion ({ activeUnitType, setActiveUnitType }) {
                 setAnswer(firstUnitValue)
             }
         }
-    }, [firstUnitValue])
+    }, [firstUnitValue, firstUnitType, secondUnitType])
+
+    // useEffect(() => {
+    //     setFirstUnitValue('')
+    //     setSecondUnitType('')
+    // }, [activeUnitType])
 
     return (
         <div>

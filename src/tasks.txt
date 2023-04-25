@@ -1,8 +1,7 @@
-1. fill in rest of conversions for time
-2. make it so changing the unit automatically changes the result instead of having to edit text inside of text box
-3. condition rendering of the result
+1. code breaks if you try to convert w/o changing first type first
+2. condition rendering of the result
     - if text boxes are empty, nothing
     - if text is a letter instead of number, tell them it cant be converted
     - if both units are the same tell, tell them both units are the same 
     - round the decimals so they are so long, probably no longer than the thounsands place
-4. make it so when you type in the second text input it also convertes instead of it being one way
+3. make it so when you type in the second text input it also convertes instead of it being one way
