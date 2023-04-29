@@ -35,6 +35,36 @@
 .form-container {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  gap: 3em;
+}
+
+.form-item {
+  /* width: 10em; */
+  width: 100%;
+}
+
+label, select {
+  display: block;
+}
+
+select {
+  width: 100%;
+}
+
+.flexy {
+  display: flex;
+  justify-content: space-between;
+  gap: .3em;
+  margin-bottom: .5em;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+}
+.answer {
+  text-align: center;
 }
 
 /* UNIT CONVERSION */

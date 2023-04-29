@@ -1,7 +1,5 @@
-1. code breaks if you try to convert w/o changing first type first
-2. condition rendering of the result
-    - if text boxes are empty, nothing
-    - if text is a letter instead of number, tell them it cant be converted
-    - if both units are the same tell, tell them both units are the same 
+1. result
     - round the decimals so they are so long, probably no longer than the thounsands place
-3. make it so when you type in the second text input it also convertes instead of it being one way
+    - plural
+    - test accuracy
+2. make it so when you type in the second text input it also convertes instead of it being only one way
